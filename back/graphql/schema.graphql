@@ -1,0 +1,17 @@
+type Email {
+    id: ID!
+    address: String!
+}
+
+type Query {
+    listEmails: [Email]
+}
+
+type Mutation {
+    addEmail(address: String!): Email
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
